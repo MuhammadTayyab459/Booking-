@@ -1,11 +1,11 @@
 class Book {
   String firstname;
-  String lastname;
+
   String email;
   String address;
   String phonenumber;
   String city;
-  String province;
+  String cnic;
   String noofadults;
   String noofchild;
   String noofadultchild;
@@ -16,11 +16,10 @@ class Book {
 
   Book({
     this.firstname,
-    this.lastname,
     this.address,
     this.comments,
     this.city,
-    this.province,
+    this.cnic,
     this.dateofarrival,
     this.dateofdeparture,
     this.email,
