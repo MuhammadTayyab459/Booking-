@@ -31,7 +31,7 @@ class _HotelFormState extends State<HotelForm> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Booking Page"),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green[400],
       ),
       body: SingleChildScrollView(
           child: Form(
@@ -39,387 +39,353 @@ class _HotelFormState extends State<HotelForm> {
         child: Column(
           children: <Widget>[
             Container(
-              //padding: Padding(),
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 70.0, 0.0),
-
               child: Text(
-                "Booking Enquiry Form",
+                "        Book Trip",
                 style: TextStyle(
                     color: Colors.black,
-                    fontSize: 30.0,
+                    fontSize: 29.0,
                     fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(height: 10.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 00.0, 0.0, 0.0),
+              padding: EdgeInsets.fromLTRB(10.0, 0.0, 00.0, 0.0),
               child: Text(
-                  "Once we receive the filed form, we will contact you shortly to confirm room availability.",
+                  "Please fill out the information below for a Pleasent stay.",
                   style: TextStyle(
                       color: Colors.black,
+                      fontStyle: FontStyle.normal,
                       fontWeight: FontWeight.w400,
                       fontSize: 20.0)),
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 0.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 220.0, 0.0),
-              child: Text(
-                "First Name ",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "First Name",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
                   validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter the First Name";
-                    }
-                    return null;
+                    if (value.isEmpty) return '  This Field is Required';
                   },
                   onSaved: (String value) {
                     book.firstname = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Enter your Full Name",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.person,
+                        color: Colors.green,
+                      )),
                 )),
-            SizedBox(height: 6.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 220.0, 0.0),
-              child: Text(
-                "Last Name",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "Last Name",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
                   validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter the Last Name";
-                    }
-                    return null;
+                    if (value.isEmpty) return '  This Field is Required';
                   },
                   onSaved: (String value) {
-                    book.lastname = value;
+                    book.cnic = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Enter your CNIC",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.perm_identity,
+                        color: Colors.green,
+                      )),
                 )),
             SizedBox(height: 6.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 270.0, 0.0),
-              child: Text(
-                "Email",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "abc@gmail.com",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
                   validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter your email";
-                    }
-                    return null;
+                    if (value.isEmpty) return '  This Field is Required';
+                  },
+                  onSaved: (String value) {
+                    book.phonenumber = value;
+                  },
+                  decoration: InputDecoration(
+                      hintText: "Enter your Contact No",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.phone,
+                        color: Colors.green,
+                      )),
+                )),
+            SizedBox(height: 0.0),
+            Container(
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
+                  validator: (String value) {
+                    if (value.isEmpty) return '  This Field is Required';
                   },
                   onSaved: (String value) {
                     book.email = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Enter your Email Address",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.mail_rounded,
+                        color: Colors.green,
+                      )),
                 )),
-            SizedBox(height: 6.0),
+            SizedBox(height: 0.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 180.0, 0.0),
-              child: Text(
-                "Phone number",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "+92 3314707720",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
                   validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter your phone number";
-                    }
-                    return null;
-                  },
-                  onSaved: (String value) {
-                    book.email = value;
-                  },
-                )),
-            SizedBox(height: 6.0),
-            Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 250.0, 0.0),
-              child: Text(
-                "Address",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "Street address line 1",
-                  validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter your address";
-                    }
-                    return null;
+                    if (value.isEmpty) return '  This Field is Required';
                   },
                   onSaved: (String value) {
                     book.address = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Enter your Residential Address",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.home,
+                        color: Colors.green,
+                      )),
                 )),
-            SizedBox(height: 5.0),
+            SizedBox(height: 0.0),
             Container(
-              child: Container(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 290.0, 0.0),
-                child: Text(
-                  "City",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
                   style: TextStyle(
-                    fontSize: 23.0,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "City",
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
                   validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter your city name";
-                    }
-                    return null;
+                    if (value.isEmpty) return '  This Field is Required';
                   },
                   onSaved: (String value) {
                     book.city = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Enter your City Name",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.location_city,
+                        color: Colors.green,
+                      )),
                 )),
-            SizedBox(height: 6.0),
+            SizedBox(height: 0.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 240.0, 0.0),
-              child: Text(
-                "Province",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "Province",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
                   validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter your province name";
-                    }
-                    return null;
+                    if (value.isEmpty) return '  This Field is Required';
                   },
                   onSaved: (String value) {
-                    book.province = value;
+                    book.nooffamilymember = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Number of your Family Members",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.family_restroom,
+                        color: Colors.green,
+                      )),
                 )),
-            SizedBox(height: 6.0),
+            SizedBox(height: 0.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 200.0, 0.0),
-              child: Text(
-                "No of adults",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "0",
-                  onSaved: (String value) {
-                    book.noofadults = value;
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
+                  validator: (String value) {
+                    if (value.isEmpty) return '  This Field is Required';
                   },
-                )),
-            SizedBox(height: 6.0),
-            Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 80.0, 0.0),
-              child: Text(
-                "No of children aged 6-15",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "0",
                   onSaved: (String value) {
                     book.noofchild = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Number of your Children",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.child_care,
+                        color: Colors.green,
+                      )),
                 )),
             SizedBox(height: 6.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 100.0, 0.0),
-              child: Text(
-                "No of Family members",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "0",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
                   validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter your family member numbers";
-                    }
-                    return null;
+                    if (value.isEmpty) return '  This Field is Required';
                   },
                   onSaved: (String value) {
-                    book.noofadultchild = value;
+                    book.noofadults = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Number of your Adults",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.family_restroom_sharp,
+                        color: Colors.green,
+                      )),
                 )),
-            SizedBox(height: 6.0),
+            SizedBox(height: 0.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 240.0, 0.0),
-              child: Text(
-                "Room type",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            SizedBox(height: 5.0),
-            Container(
-              child: DropdownButton(
-                value: valuechoose,
-                hint: Text("Select room type"),
-                dropdownColor: Colors.grey,
-                icon: Icon(Icons.arrow_drop_down),
-                iconSize: 36.0,
-                style: TextStyle(color: Colors.black, fontSize: 20.0),
-                isExpanded: true,
-                onChanged: (newValue) {
-                  setState(() {
-                    valuechoose = newValue;
-                  });
-                },
-                items: listitems.map((valueitem) {
-                  return DropdownMenuItem(
-                    value: valueitem,
-                    child: Text(valueitem),
-                  );
-                }).toList(),
-              ),
-            ),
-            SizedBox(height: 6.0),
-            Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 170.0, 0.0),
-              child: Text(
-                "Date of Arrival",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "DD-MM-YYYY",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
                   validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter your arrival date";
-                    }
-                    return null;
+                    if (value.isEmpty) return '  This Field is Required';
                   },
                   onSaved: (String value) {
                     book.dateofarrival = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Check-In-Date (mm/dd/yy)",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.calendar_today,
+                        color: Colors.green,
+                      )),
                 )),
-            SizedBox(height: 6.0),
+            SizedBox(height: 0.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 150.0, 0.0),
-              child: Text(
-                "Date of Departure",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "DD-MM-YYYY",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
                   validator: (String value) {
-                    if (value.isEmpty) {
-                      return "Enter your departure";
-                    }
-                    return null;
+                    if (value.isEmpty) return '  This Field is Required';
                   },
                   onSaved: (String value) {
                     book.dateofdeparture = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Check-Out-Date (mm/dd/yy)",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.calendar_today_outlined,
+                        color: Colors.green,
+                      )),
                 )),
-            SizedBox(height: 6.0),
+            SizedBox(height: 0.0),
             Container(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 220.0, 0.0),
-              child: Text(
-                "Comments",
-                style: TextStyle(
-                  fontSize: 23.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                child: Decoration(
-                  hinttext: "Comments",
+                padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.normal),
+                  // ignore: missing_return
+                  /* validator: (String value) {
+                    if (value.isEmpty) return '  This Field is Required';
+                  },*/
                   onSaved: (String value) {
                     book.comments = value;
                   },
+                  decoration: InputDecoration(
+                      hintText: "Comments",
+                      hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w400),
+                      prefixIcon: Icon(
+                        Icons.comment_rounded,
+                        color: Colors.green,
+                      )),
                 )),
             RaisedButton(
-              color: Colors.grey,
-              child: Text("Preview"),
+              color: Colors.green[400],
+              child: Text("Submit"),
+              textColor: Colors.white,
               onPressed: () {
                 if (_firstnamekey.currentState.validate()) {
                   _firstnamekey.currentState.save();
@@ -437,7 +403,7 @@ class _HotelFormState extends State<HotelForm> {
   }
 }
 
-class Decoration extends StatelessWidget {
+/*class Decoration extends StatelessWidget {
   final String hinttext;
 
   final Function validator;
@@ -471,4 +437,4 @@ class Decoration extends StatelessWidget {
       ),
     );
   }
-}
+}*/

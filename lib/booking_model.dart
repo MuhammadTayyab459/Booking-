@@ -8,7 +8,7 @@ class Book {
   String cnic;
   String noofadults;
   String noofchild;
-  String noofadultchild;
+  String nooffamilymember;
   String comments;
   String dateofarrival;
   String dateofdeparture;
@@ -23,7 +23,7 @@ class Book {
     this.dateofarrival,
     this.dateofdeparture,
     this.email,
-    this.noofadultchild,
+    this.nooffamilymember,
     this.noofadults,
     this.noofchild,
     this.phonenumber,
