@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 class Hotel extends StatefulWidget {
   @override
@@ -12,4 +12,4 @@ class _HotelState extends State<Hotel> {
       child: (Text("hello")),
     );
   }
-}
+}*/

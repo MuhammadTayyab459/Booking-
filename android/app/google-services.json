@@ -1,78 +1,33 @@
 {
   "project_info": {
-    "project_number": "378441060926",
-    "project_id": "travel-hour-22dfc",
-    "storage_bucket": "travel-hour-22dfc.appspot.com"
+    "project_number": "963597871553",
+    "project_id": "hotel-44f7f",
+    "storage_bucket": "hotel-44f7f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:378441060926:android:9cc3323551195923e2776f",
+        "mobilesdk_app_id": "1:963597871553:android:8f57744b8809d957c62740",
         "android_client_info": {
           "package_name": "com.example.book"
         }
       },
       "oauth_client": [
         {
-          "client_id": "378441060926-5mchfjqvd0cgekh1e66d15nu49pi1efl.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.book",
-            "certificate_hash": "ab345cf459c25580959587363da5718496673ebb"
-          }
-        },
-        {
-          "client_id": "378441060926-cdbcnhkc4gl5po2kj7j8b0m9g9k8njat.apps.googleusercontent.com",
+          "client_id": "963597871553-2k9hhgj0qtkjfi42go9kepa3kd1l4kdn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDARcWNHeWBarkJ4JxdUWaAEQ7W1UMy6-c"
+          "current_key": "AIzaSyCFlYLNrE1sLrru-9wXRJG77cndVqAv1-Q"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "378441060926-cdbcnhkc4gl5po2kj7j8b0m9g9k8njat.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:378441060926:android:9ff3989aae4617ffe2776f",
-        "android_client_info": {
-          "package_name": "com.mrblab.travel_hour"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "378441060926-k6otgas61fduqbs95mpng7u7jusdesvf.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.mrblab.travel_hour",
-            "certificate_hash": "ab345cf459c25580959587363da5718496673ebb"
-          }
-        },
-        {
-          "client_id": "378441060926-cdbcnhkc4gl5po2kj7j8b0m9g9k8njat.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDARcWNHeWBarkJ4JxdUWaAEQ7W1UMy6-c"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "378441060926-cdbcnhkc4gl5po2kj7j8b0m9g9k8njat.apps.googleusercontent.com",
+              "client_id": "963597871553-2k9hhgj0qtkjfi42go9kepa3kd1l4kdn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

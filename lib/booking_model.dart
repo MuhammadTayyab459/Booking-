@@ -1,6 +1,5 @@
 class Book {
   String firstname;
-
   String email;
   String address;
   String phonenumber;

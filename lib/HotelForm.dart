@@ -9,7 +9,7 @@ class HotelForm extends StatefulWidget {
 
 class _HotelFormState extends State<HotelForm> {
   final _firstnamekey = GlobalKey<FormState>();
-  final _lastnamekey = GlobalKey<FormState>();
+  /*final _lastnamekey = GlobalKey<FormState>();
   final _emailkey = GlobalKey<FormState>();
   final _phonrnumberkey = GlobalKey<FormState>();
   final _addresskey = GlobalKey<FormState>();
@@ -23,7 +23,7 @@ class _HotelFormState extends State<HotelForm> {
   final _dateofdeparturekey = GlobalKey<FormState>();
   final _commentkey = GlobalKey<FormState>();
   String valuechoose;
-  List listitems = ['Single', "Double", "Couple", "Luxury"];
+ // List listitems = ['Single', "Double", "Couple", "Luxury"];*/
 
   Book book = Book();
   @override
@@ -63,6 +63,7 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.name,
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -89,6 +90,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.number,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -116,6 +119,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.phone,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -143,6 +148,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -170,6 +177,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.streetAddress,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -197,6 +206,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.text,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -224,6 +235,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.number,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -251,6 +264,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.number,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -278,6 +293,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.number,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -305,6 +322,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.datetime,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -332,6 +351,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.datetime,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,
@@ -359,6 +380,8 @@ class _HotelFormState extends State<HotelForm> {
             Container(
                 padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.text,
+
                   cursorColor: Colors.black,
                   style: TextStyle(
                       color: Colors.black,

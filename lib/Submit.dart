@@ -101,10 +101,10 @@ class Result extends StatelessWidget {
               SizedBox(height: 20.0),
               Container(
                 alignment: Alignment.center,
-                child: RaisedButton(
-                    color: Colors.green[400],
+                child: ElevatedButton(
+                    //color: Colors.green[400],
                     child: Text("Submit"),
-                    textColor: Colors.white,
+                    // textColor: Colors.white,
                     onPressed: () {
                       firestore.collection('hotel_booking').add({
                         'Full Name': book.firstname,
